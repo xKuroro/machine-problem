@@ -198,61 +198,69 @@ function getInput(){
     let inputDirection = document.querySelector('.direction').value.toLowerCase();
     let inputText = document.querySelector('.inputs').value.toUpperCase().split('');
     console.log(inputText);
-    console.log(inputOddNumber)
+    console.log(typeof inputOddNumber)
     let elemFlow = setDir(inputDirection);
     console.log(elemFlow)
     // if()
 
-
-    for(let i = 0; i < inputText.length; i++){
+    if(inputDirection && inputOddNumber && inputText === /^[XYZ]+$/){
+        for(let i = 0; i < inputText.length; i++){
         
-        if(inputText[i] === 'X'){
-
-            outputContainer.style.flexDirection = `${elemFlow}`;
-            let height = inputOddNumber;
-            const divBox = document.createElement('div');
-            divBox.classList.add('box');
-            outputContainer.append(divBox)
-            p.push(inputText[i])
-            console.log(p)
-            console.log(p.length)
-            printX(divBox,height);
+            if(inputText[i] === 'X'){
     
-        }else if(inputText[i] === 'Y'){
-
-            outputContainer.style.flexDirection = `${elemFlow}`;
-            let height = inputOddNumber;
-            const divBox = document.createElement('div');
-            divBox.classList.add('box');
-            outputContainer.append(divBox)
-            p.push(inputText[i])
-            console.log(p)
-            console.log(p.length)
-            printY(divBox,height);
-           
-        }else if(inputText[i] === 'Z'){
-
-            outputContainer.style.flexDirection =   `${elemFlow}`;
-            let height = inputOddNumber;
-            const divBox = document.createElement('div');
-            divBox.classList.add('box');
-            outputContainer.append(divBox)
-            p.push(inputText[i])
-            console.log(p)
-            console.log(p.length)
-            printZ(divBox,height);
+                outputContainer.style.flexDirection = `${elemFlow}`;
+                let height = inputOddNumber;
+                const divBox = document.createElement('div');
+                divBox.classList.add('box');
+                outputContainer.append(divBox)
+                p.push(inputText[i])
+                console.log(p)
+                console.log(p.length)
+                printX(divBox,height);
+        
+            }else if(inputText[i] === 'Y'){
+    
+                outputContainer.style.flexDirection = `${elemFlow}`;
+                let height = inputOddNumber;
+                const divBox = document.createElement('div');
+                divBox.classList.add('box');
+                outputContainer.append(divBox)
+                p.push(inputText[i])
+                console.log(p)
+                console.log(p.length)
+                printY(divBox,height);
+               
+            }else if(inputText[i] === 'Z'){
+    
+                outputContainer.style.flexDirection =   `${elemFlow}`;
+                let height = inputOddNumber;
+                const divBox = document.createElement('div');
+                divBox.classList.add('box');
+                outputContainer.append(divBox)
+                p.push(inputText[i])
+                console.log(p)
+                console.log(p.length)
+                printZ(divBox,height);
+            }
+            // return inputFields;
         }
-        // return inputFields;
+
+    }else{
+        alert('fill all the inputs.')
     }
+    
 }
 
    function setDir(dir){
+    console.log(dir)
         let directions = '';
         if(dir === 'vertical'){
             return directions = 'row'
-        }else{
+        }else if(dir === 'horizontal'){
             return directions = 'column'
-        };
+        }else{
+            return directions;
+        }
         
     };
 

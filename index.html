@@ -8,18 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>X Y Z machine problem</h1>
     <div class="example container1">
-     <h1>Example 1</h1>
+     <h1>X Y Z machine problem</h1>
      <!-- <span>horizontal  : size 3</span> -->
+     <!-- <form id="form"> -->
      <div class="input-container">
+    <label>Text :</label>
     <input type="text" class="inputs" placeholder="Any combination of letters X, Y and Z">
-    <input type="text" class="oddNumber" placeholder="Enter odd numbers not under 3">
-    <input type="text" class="direction" placeholder="Select 'Vertical' or 'Horizontal'">
-    <button id="submit">Submit</button>
-        </div>
+    <span class="error-xyz">must contain X,Y and Z</span>
+    <label>Number :</label>
+    <input type="text" class="oddNumber" placeholder="Enter odd numbers not under 3" >
+    <span class="error-numbers">numbers above 3 and Odd number</span>
+    <label>Direction :</label>
+    <input type="text" class="direction" placeholder="Select 'Vertical' or 'Horizontal'" >
+    <span class="error-direction">pls choose between vertical or horizontal</span>
+     <div class="button-container">
+      <button id="submit" type="submit">Submit</button>
+      <button id="clear">clear</button> 
+    </div>
+    </div>
+    <!-- </form> -->
     <div class="output-container">
-        <!-- <div class="box"></div> -->
     </div>
     </div>
 

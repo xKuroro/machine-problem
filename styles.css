@@ -21,7 +21,7 @@ html, body{
 }
 
 .example{
-    width: 500px;
+    width: 100%;
     max-height: fit-content;
     height: fit-content;
     color: greenyellow;
@@ -93,7 +93,8 @@ visibility: hidden;
 
 .input-container input{
     width: 80%;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 20px;
     border: 1px solid greenyellow;
 }
 
@@ -127,7 +128,14 @@ visibility: hidden;
     margin: 2px;
 }
 button{
-    background-color: gray;
     padding: 10px;
     border-radius: 20px;
+}
+ #submit{
+    background-color: gold;
+    width: 100px;
+}
+#clear{
+    background-color: red;
+    color:beige;
 }

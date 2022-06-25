@@ -271,7 +271,7 @@ function clearFunction(){
 
      if(dirs === ''){
         setError(elemErrorDirection, 'Insert some Text.');
-     }else if(dirs = !correctDir.includes(dirs) ){
+     }else if(dirs && !correctDir.includes(dirs) ){
         console.log(dirs)
         setError(elemErrorDirection,'Text should be vertical or horizontal.')
      }else{

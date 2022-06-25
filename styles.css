@@ -88,7 +88,7 @@ visibility: hidden;
     gap: 3px;
     flex-direction: column;
     padding: 4px;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
 }
 
 .input-container input{
